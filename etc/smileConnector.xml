@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Smile_Connector:etc/smileConnector.xsd">
+    <interface name="atol" use_webservice="rest" use_flatfile="false">
+        <tasks>
+            <task name="invoiceExport">
+                <classname>Mmd\Atol\Task\Export\InvoiceExport</classname>
+                <main_object>invoice</main_object>
+                <properties>
+                    <can_have_multiple_instances_on_same_context>false</can_have_multiple_instances_on_same_context>
+                    <must_be_executed_asynchronously>false</must_be_executed_asynchronously>
+                    <can_reexecute_automatically_if_communication_error>false</can_reexecute_automatically_if_communication_error>
+                    <can_reexecute_automatically_if_execution_error>false</can_reexecute_automatically_if_execution_error>
+                </properties>
+            </task>
+            <task name="creditmemoExport">
+                <classname>Mmd\Atol\Task\Export\CreditmemoExport</classname>
+                <main_object>creditmemo</main_object>
+                <properties>
+                    <can_have_multiple_instances_on_same_context>false</can_have_multiple_instances_on_same_context>
+                    <must_be_executed_asynchronously>false</must_be_executed_asynchronously>
+                    <can_reexecute_automatically_if_communication_error>false</can_reexecute_automatically_if_communication_error>
+                    <can_reexecute_automatically_if_execution_error>false</can_reexecute_automatically_if_execution_error>
+                </properties>
+            </task>
+            <task name="sellChequeImport">
+                <classname>Mmd\Atol\Task\Import\SellChequeImport</classname>
+                <main_object>invoice</main_object>
+                <properties>
+                    <can_have_multiple_instances_on_same_context>false</can_have_multiple_instances_on_same_context>
+                    <must_be_executed_asynchronously>false</must_be_executed_asynchronously>
+                    <can_reexecute_automatically_if_communication_error>false</can_reexecute_automatically_if_communication_error>
+                    <can_reexecute_automatically_if_execution_error>false</can_reexecute_automatically_if_execution_error>
+                </properties>
+            </task>
+            <task name="refundChequeImport">
+                <classname>Mmd\Atol\Task\Import\RefundChequeImport</classname>
+                <main_object>creditmemo</main_object>
+                <properties>
+                    <can_have_multiple_instances_on_same_context>false</can_have_multiple_instances_on_same_context>
+                    <must_be_executed_asynchronously>false</must_be_executed_asynchronously>
+                    <can_reexecute_automatically_if_communication_error>false</can_reexecute_automatically_if_communication_error>
+                    <can_reexecute_automatically_if_execution_error>false</can_reexecute_automatically_if_execution_error>
+                </properties>
+            </task>
+        </tasks>
+    </interface>
+</config>

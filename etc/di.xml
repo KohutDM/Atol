@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Mmd\Atol\Api\ItemInterface" type="Mmd\Atol\Model\Item"/>
+    <preference for="Mmd\Atol\Api\PaymentInterface" type="Mmd\Atol\Model\Payment"/>
+    <preference for="Mmd\Atol\Api\VendorInterface" type="Mmd\Atol\Model\Vendor"/>
+    <preference for="Mmd\Atol\Api\RequestInterface" type="Mmd\Atol\Model\Request"/>
+</config>

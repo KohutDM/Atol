@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <mmd_atol>
+            <atol>
+                <webservice_url>https://testonline.atol.ru/possystem/v4/</webservice_url>
+                <webservice_timeout>60</webservice_timeout>
+                <login>v4-online-atol-ru</login>
+                <password>0:3:TwIImTs4VB15/0NrITkF++5B5jOVjrDFRz8r9dA4aIJGSzQRtQ==</password>
+                <group_code>v4-online-atol-ru_4179</group_code>
+                <inn>5544332219</inn>
+                <payment_address>https://v4.online.atol.ru</payment_address>
+            </atol>
+            <general>
+                <enabled>1</enabled>
+                <default_shipping_name>1</default_shipping_name>
+            </general>
+            <vat>
+                <none>Without VAT</none>
+                <vat0>0%</vat0>
+                <vat10>10%</vat10>
+                <vat20>20%</vat20>
+                <vat110>10/110</vat110>
+                <vat120>20/120</vat120>
+            </vat>
+        </mmd_atol>
+    </default>
+</config>

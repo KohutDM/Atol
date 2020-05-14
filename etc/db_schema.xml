@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sales_invoice">
+        <column xsi:type="varchar" length="16" name="atol_status" comment="Atol status"/>
+        <column xsi:type="varchar" length="255" name="atol_uuid" comment="Atol uuid"/>
+    </table>
+    <table name="sales_creditmemo">
+        <column xsi:type="varchar" length="16" name="atol_status" comment="Atol status"/>
+        <column xsi:type="varchar" length="255" name="atol_uuid" comment="Atol uuid"/>
+    </table>
+</schema>

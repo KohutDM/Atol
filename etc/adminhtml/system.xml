@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mmd" translate="label" sortOrder="101">
+            <label>Mmd</label>
+        </tab>
+        <section id="mmd_atol" translate="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Mmd Atol</label>
+            <tab>mmd</tab>
+            <resource>Mmd_Atol::config</resource>
+            <group id="atol" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Atol Settings</label>
+                <field id="webservice_url" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Atol Webservice Url</label>
+                </field>
+                <field id="webservice_timeout" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Atol Webservice Timeout</label>
+                </field>
+                <field id="login" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Atol login</label>
+                </field>
+                <field id="password" translate="label" type="obscure" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Atol password</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                <field id="group_code" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Atol Group Code</label>
+                </field>
+                <field id="inn" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>INN code</label>
+                    <validate>validate-digits</validate>
+                </field>
+                <field id="payment_address" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Payment Address</label>
+                </field>
+                <field id="sno" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>SNO</label>
+                    <source_model>Mmd\Atol\Model\Source\Sno</source_model>
+                </field>
+            </group>
+
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="tax_options" translate="label" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tax options</label>
+                    <source_model>Mmd\Atol\Model\Source\Tax</source_model>
+                </field>
+                <field id="payment_methods" translate="label" type="multiselect" sortOrder="120" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>List of payment methods</label>
+                    <source_model>Mmd\Atol\Model\Source\Payments</source_model>
+                    <frontend_class>validate-select</frontend_class>
+                </field>
+                <field id="shipping_tax" translate="label" type="select" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Shipping tax code</label>
+                    <source_model>Mmd\Atol\Model\Source\Tax</source_model>
+                </field>
+                <field id="default_shipping_name" translate="label" type="select" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Use default shipping name</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="custom_shipping_name" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Custom shipping name</label>
+                    <depends>
+                        <field id="*/*/default_shipping_name">0</field>
+                    </depends>
+                </field>
+            </group>
+
+            <group id="vat" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Tax Settings</label>
+                <field id="none" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Without Value-added tax (VAT)</label>
+                </field>
+                <field id="vat0" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>VAT 0%</label>
+                </field>
+                <field id="vat10" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>VAT 10%</label>
+                </field>
+                <field id="vat20" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>VAT 20%</label>
+                </field>
+                <field id="vat110" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>VAT 110%</label>
+                </field>
+                <field id="vat120" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>VAT 120%</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

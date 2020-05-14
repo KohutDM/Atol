@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="mmd_atol">
+        <job name="mmd_atol_export_invoice_to_atol" instance="Mmd\Atol\Cron\Export\InvoiceExport" method="execute">
+            <schedule>*/30 * * * *</schedule>
+        </job>
+        <job name="mmd_atol_check_sell_cheque_in_atol" instance="Mmd\Atol\Cron\Import\SellChequeImport" method="execute">
+            <schedule>*/30 * * * *</schedule>
+        </job>
+        <job name="mmd_atol_export_creditmemo_to_atol" instance="Mmd\Atol\Cron\Export\CreditmemoExport" method="execute">
+            <schedule>*/30 * * * *</schedule>
+        </job>
+        <job name="mmd_atol_check_refund_cheque_in_atol" instance="Mmd\Atol\Cron\Import\RefundChequeImport" method="execute">
+            <schedule>*/30 * * * *</schedule>
+        </job>
+    </group>
+</config>
